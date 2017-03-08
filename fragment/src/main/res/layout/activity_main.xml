@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="shbd.fragment.activity.MainActivity">
+
+    <Button
+        android:id="@+id/btn_stastic_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/use_static_fragment" />
+
+    <Button
+        android:id="@+id/btn_dynamic_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/use_dynamic_fragment" />
+
+    <Button
+        android:id="@+id/btn_stack_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_stack" />
+
+    <Button
+        android:id="@+id/btn_about_fragment_arguments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_arguments" />
+
+
+    <Button
+        android:id="@+id/btn_about_start_activity_for_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/about_startActivityForResult" />
+</LinearLayout>

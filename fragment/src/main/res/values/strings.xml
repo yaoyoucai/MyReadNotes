@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">我的activity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">主体部分</string>
+    <string name="use_static_fragment">静态使用fragment</string>
+    <string name="use_dynamic_fragment">动态使用fragment</string>
+    <string name="weixin">微信</string>
+    <string name="friends">朋友</string>
+    <string name="fragment_stack">管理fragment回退栈</string>
+    <string name="fragment_one">fragment_one</string>
+    <string name="fragment_three">fragment_three</string>
+    <string name="fragment_two">fragment_two</string>
+    <string name="go_fragment_two">跳转到fragment_two</string>
+    <string name="go_fragment_three">跳转到fragment_three</string>
+    <string name="fragment_arguments">从activity传值到fragment的方法</string>
+    <string name="about_startActivityForResult">有关startActivityForResult</string>
+</resources>
