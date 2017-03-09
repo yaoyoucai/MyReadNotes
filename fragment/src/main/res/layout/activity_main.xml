@@ -8,6 +8,12 @@
     tools:context="shbd.fragment.activity.MainActivity">
 
     <Button
+        android:id="@+id/btn_fragment_bug"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_bug" />
+
+    <Button
         android:id="@+id/btn_stastic_fragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

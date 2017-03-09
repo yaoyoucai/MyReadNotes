@@ -15,4 +15,5 @@
     <string name="go_fragment_three">跳转到fragment_three</string>
     <string name="fragment_arguments">从activity传值到fragment的方法</string>
     <string name="about_startActivityForResult">有关startActivityForResult</string>
+    <string name="fragment_bug">fragment重叠问题</string>
 </resources>
