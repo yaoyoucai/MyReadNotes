@@ -5,6 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -16,7 +19,36 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         String msg = savedInstanceState != null ? "true" : "false";
         Log.e("TAG", "onCreate,hasSaveInstance : " + msg);
+
+
     }
+
+    public void handleInfo(View view) {
+        Dog target = new GunDog();
+        MyInvocationHandler ih = new MyInvocationHandler();
+        ih.setTarget(target);
+        Dog dog = (Dog) Proxy.newProxyInstance(target.getClass().getClassLoader()
+                , target.getClass().getInterfaces(), ih);
+        dog.info();
+    }
+
+    private class MyInvocationHandler implements InvocationHandler {
+        private Object target;
+
+        public void setTarget(Object target) {
+            this.target = target;
+        }
+
+        @Override
+        public Object invoke(Object o, Method method, Object[] objects) throws Throwable {
+            DogUtils.methoid1();
+            Object result = method.invoke(target, objects);
+            DogUtils.methoid2();
+            return result;
+        }
+    }
+
+    ;
 
     public void openThreadPool(View view) {
         ExecutorService executorService = Executors.newFixedThreadPool(6);

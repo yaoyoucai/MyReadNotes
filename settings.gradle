@@ -1,1 +1,1 @@
-include ':app', ':animation', ':fragment', ':service'
+include ':app', ':animation', ':fragment', ':service', ':retrofitdemo'
